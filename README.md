@@ -31,7 +31,7 @@ Le impostazioni che possono essere apportate sono:
 
 ### Immagine di copertina
 
-Sono disponibili nella cartella `assets` le copertine per il _Politecnico di Torino_ e l'_Università di Pisa_. Per adoperarle è sufficiente rinominare il file desiderato in `background.pdf`. E' inoltre presente il template `background.svg` in formato vettoriale come riferimento per eseguire le modifiche.  
+Sono disponibili nella cartella `titlepages` le copertine per il _Politecnico di Torino_ e l'_Università di Pisa_. Per adoperarle è sufficiente rinominare il file desiderato in `assets/background.pdf`. E' inoltre presente il template `background.svg` in formato vettoriale come riferimento per eseguire le modifiche.  
 
 ## Compilazione
 
@@ -85,7 +85,7 @@ Tale operazione può essere semplificata eseguendo lo script `vscode_extensions.
 
 ### 4. Rimuovi file inutili
 
-Cancella `install.bat`.
+Cancella `install.bat`, `vscode_extensions.bat` e la cartella `titlepages/`, se non più necessari.
 
 ### Inizia
 
