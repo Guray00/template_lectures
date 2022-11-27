@@ -87,6 +87,6 @@ Tale operazione può essere semplificata eseguendo lo script `vscode_extensions.
 
 Cancella `install.bat`, `vscode_extensions.bat` e la cartella `titlepages/`, se non più necessari.
 
-### Inizia
+### 5. Inizia
 
 Inizia la scrittura dei tuoi appunti! **Nota:** Al primo avvio mancheranno alcune dipendenze per il latex, leva la spunta alla schermata di installazione pacchetto "show always" e premi su "install". In questo modo verranno installati i pacchetti necessari senza doverlo eseguire manualmente.
