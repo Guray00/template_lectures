@@ -65,7 +65,25 @@ Se hai scaricato lo zip dal link, estrai la cartella, ed entra al suo interno.
 
 Installa le dipendenze necessarie per la compilazione dei file eseguendo il file `install.bat`.
 
-### Rimuovi file inutili
+
+### 3. Installa le estensioni per vscode [opzionale]
+
+Al fine di avere un'esperienza migliore, è consigliato installare le seguenti estensioni per vscode:
+```text
+bierner.markdown-emoji
+bierner.markdown-yaml-preamble
+darkriszty.markdown-table-prettify
+DavidAnson.vscode-markdownlint
+telesoho.vscode-markdown-paste-image
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-italian
+yzane.markdown-pdf
+yzhang.markdown-all-in-one
+```
+
+Tale operazione può essere semplificata eseguendo lo script `vscode_extensions.bat`.
+
+### 4. Rimuovi file inutili
 
 Cancella `install.bat`.
 
