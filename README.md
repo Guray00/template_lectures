@@ -1,6 +1,6 @@
 # Lectures Template
 
-Template per gli appunti delle lezioni.
+Template per gli appunti delle lezioni. Questo template automatizza la creazione di epub, pdf e html da file markdown attraverso il tool [Pandoc](https://pandoc.org/).
 
 ## Utilizzo
 
@@ -37,9 +37,6 @@ Sono disponibili nella cartella `assets` le copertine per il _Politecnico di Tor
 
 Per compilare il progetto sia in formato pdf che html è sufficiente avviare lo script `compile.bat`, automaticamente verrà generato il file pdf, html ed epub all'interno della cartella `output`, con il nome della **cartella** (può essere modificato nel file `compile.bat`).
 
-## Tecnologie
-
-Questo template automatizza la creazione di epub, pdf e html da file markdown attraverso il tool [Pandoc](https://pandoc.org/).
 
 ## Installazione
 
