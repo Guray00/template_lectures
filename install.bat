@@ -21,14 +21,14 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('https://miktex.org
 
 echo latex scaricato
 echo installazione di latex in corso, prosegui nella finestra che si aprirà a breve!
-.\latex.exe
+call .\latex.exe
 
 :: latex --version > nul || (
 :: echo latex non e' stato installato, abortisco l'installazione
 :: exit
 :: )
 
-DEL latex.exe
+if exist "./latex.exe" DEL latex.exe
 )
 echo latex installato.
 echo: 
@@ -40,14 +40,14 @@ echo pandoc non installato, download in corso...
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-windows-x86_64.msi', 'pandoc.msi')"
 echo pandoc scaricato
 echo installazione di pandoc in corso, prosegui nella finestra che si aprirà a breve!
-.\pandoc.msi
+call .\pandoc.msi
 
 :: pandoc --version > nul || (
 :: echo pandoc non e' stato installato, abortisco l'installazione
 :: exit
 :: )
 
-DEL ./pandoc.msi
+if exist "./pandoc.msi" DEL ./pandoc.msi
 )
 echo pandoc installato.
 echo: 
@@ -66,8 +66,8 @@ echo template copiati.
 echo:
 
 :: elimino eventuali rimasugli
-DEL latex.exe
-DEL ./pandoc.msi
+if exist "./latex.exe" DEL ./latex.exe
+if exist "./pandoc.msi" DEL ./pandoc.msi
 
 echo Installazione terminata.
 pause

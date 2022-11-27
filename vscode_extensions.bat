@@ -31,6 +31,5 @@ CMD /C code --install-extension yzhang.markdown-all-in-one
 echo: 
 
 echo Estensioni installate.
-
-
+pause
 
