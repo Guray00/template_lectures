@@ -1,0 +1,20 @@
+---
+title: "Lecture Example"
+subtitle: "Lorem Ipsum, dolor sit amet"
+author: [John Doe]
+keywords: [Markdown]
+book: true
+date: "\\today"
+
+# PDF: copertina
+titlepage: true
+titlepage-color: "154C79"
+titlepage-text-color: "154C79"
+titlepage-background: "./assets/background.pdf"
+titlepage-rule-height: 0
+
+# table of contents
+toc-own-page: true
+
+# numerazione primo capitolo
+first-chapter: 0
