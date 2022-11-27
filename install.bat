@@ -23,10 +23,10 @@ echo latex scaricato
 echo installazione di latex in corso, prosegui nella finestra che si aprirà a breve!
 .\latex.exe
 
-latex --version > nul || (
-echo latex non e' stato installato, abortisco l'installazione
-exit
-)
+:: latex --version > nul || (
+:: echo latex non e' stato installato, abortisco l'installazione
+:: exit
+:: )
 
 DEL latex.exe
 )
@@ -42,10 +42,10 @@ echo pandoc scaricato
 echo installazione di pandoc in corso, prosegui nella finestra che si aprirà a breve!
 .\pandoc.msi
 
-pandoc --version > nul || (
-echo pandoc non e' stato installato, abortisco l'installazione
-exit
-)
+:: pandoc --version > nul || (
+:: echo pandoc non e' stato installato, abortisco l'installazione
+:: exit
+:: )
 
 DEL ./pandoc.msi
 )
@@ -57,13 +57,17 @@ echo Sto copiando i template...
 if not exist "C:\Users\%username%\AppData\Roaming\pandoc\templates" mkdir C:\Users\%username%\AppData\Roaming\pandoc\templates
 
 :: scarico template latex
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex', 'C:\Users\%username%\AppData\Roaming\pandoc\templates\eisvogel.tex')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex', 'C:\Users\%username%\AppData\Roaming\pandoc\templates\eisvogel.latex')"
 
 
 :: scarico template web
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/elegant_bootstrap_menu.html', 'C:\Users\%username%\AppData\Roaming\pandoc\templates\elegant_bootstrap_menu.html')"
 echo template copiati.
 echo:
+
+:: elimino eventuali rimasugli
+DEL latex.exe
+DEL ./pandoc.msi
 
 echo Installazione terminata.
 pause
