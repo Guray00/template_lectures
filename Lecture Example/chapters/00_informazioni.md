@@ -11,3 +11,23 @@ Morbi ut magna non mauris vestibulum ullamcorper quis ac justo. Quisque non posu
 
 ###  Aliquam eu convallis leo
 Etiam suscipit turpis eget massa egestas, a tincidunt elit laoreet. Donec ultricies diam a feugiat eleifend. Vivamus posuere, tortor at porttitor vehicula, lacus sapien laoreet nunc, eu pulvinar arcu sapien ac ligula. In in purus sit amet eros ultrices vehicula. Duis euismod dolor vitae tincidunt faucibus. In vel justo at velit sodales molestie sit amet id sapien. Fusce accumsan finibus justo sed maximus. Nullam nec libero vitae lorem tempor feugiat ut eu sapien. Nullam eget quam sed erat malesuada consectetur eu at neque. Aliquam eu convallis leo. Fusce semper tempor sem, id lacinia erat pretium eu. In quis nulla feugiat, vestibulum erat quis, ultricies sem. Curabitur scelerisque malesuada leo, et vulputate nisi interdum nec. Duis tempus porttitor pulvinar. Sed finibus ligula ac nunc molestie maximus. Aenean sit amet elementum augue, eleifend scelerisque neque.
+
+::: tip
+**Tip**: This is a custom box that may be used to show tips messages in your
+document.
+:::
+
+::: info
+**Info**: This is a custom box that may be used to show info messages in your
+document.
+:::
+
+::: warning
+**Warning**: This is a custom box that may be used to show warning messages in
+your document.
+:::
+
+::: error
+**Error**: This is a custom box that may be used to show error messages in your
+document.
+:::
