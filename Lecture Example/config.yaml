@@ -5,6 +5,7 @@ author: [John Doe]
 keywords: [Markdown]
 book: true
 date: "\\today"
+lang: "it"
 
 # PDF: copertina
 titlepage: true

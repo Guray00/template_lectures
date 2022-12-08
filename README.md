@@ -28,6 +28,7 @@ Le impostazioni che possono essere apportate sono:
 - `titlepage-rule-height`: mostra una linea in alto a destra della copertina, solitamente disabilitato.
 - `toc-own-page`: mostra la tabella dei contenuti su una pagina a parte.
 - `first-chapter`: Il numero da cui far partire la numerazione dei capitoli.
+- `lang`: lingua del documento
 
 ### Immagine di copertina
 
@@ -36,7 +37,6 @@ Sono disponibili nella cartella `titlepages` le copertine per il _Politecnico di
 ## Compilazione
 
 Per compilare il progetto sia in formato pdf che html è sufficiente avviare lo script `compile.bat`, automaticamente verrà generato il file pdf, html ed epub all'interno della cartella `output`, con il nome della **cartella** (può essere modificato nel file `compile.bat`).
-
 
 ## Installazione
 
@@ -65,10 +65,10 @@ Se hai scaricato lo zip dal link, estrai la cartella, ed entra al suo interno.
 
 Installa le dipendenze necessarie per la compilazione dei file eseguendo il file `install.bat`.
 
-
 ### 3. Installa le estensioni per vscode [opzionale]
 
 Al fine di avere un'esperienza migliore, è consigliato installare le seguenti estensioni per vscode:
+
 ```text
 bierner.markdown-emoji
 bierner.markdown-yaml-preamble
