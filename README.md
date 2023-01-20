@@ -16,7 +16,6 @@ Degli esempi sono disponibili seguendo i link nella tabella che segue, mentre un
         <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.pdf">PDF</a>
     <td> <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.html">WEB</a>
     <td> <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.epub">EPUB</a>
-<tr>
 </table>
 
 ## Utilizzo
