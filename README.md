@@ -2,6 +2,23 @@
 
 Template per gli appunti delle lezioni. Questo template automatizza la creazione di epub, pdf e html da file markdown attraverso il tool [Pandoc](https://pandoc.org/).
 
+Degli esempi sono disponibili seguendo i link nella tabella che segue, mentre un esempio reale lo si può trovare nella repository [polito_lectures](https://github.com/Guray00/polito_lectures):
+
+<table>
+<tr>
+    <td> Nome
+    <td> PDF
+    <td> WEB (ctrl + S)
+    <td> EPUB
+<tr>
+    <td> Lorem Ipsum
+    <td> 
+        <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.pdf">PDF</a>
+    <td> <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.html">WEB</a>
+    <td> <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.epub">EPUB</a>
+<tr>
+</table>
+
 ## Utilizzo
 
 ### Inclusione file
