@@ -58,7 +58,7 @@ Your Awesome Lecture
         Lecture Example.pdf
 ```
 
-Il template è composto da tre cartelle principali:
+Il template è composto da quattro cartelle principali:
 
 - **assets**: contiene il necessario per la generazione della formattazione dell'output come copertina e css.
 - **chapters**: contiene i capitoli del documento.
