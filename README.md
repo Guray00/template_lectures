@@ -1,8 +1,10 @@
 # Lectures Template
 
-Template per gli appunti delle lezioni. Questo template automatizza la creazione di epub, pdf e html da file markdown attraverso il tool [Pandoc](https://pandoc.org/).
+Questo progetto nasce con lo scopo di fornire agli studenti un modo semplice ed efficace per prendere gli appunti durante i corsi seguiti, focalizzandosi sul contenuto senza doversi preoccupare dell'aspetto grafico (come avviene su MS Word).
 
-Degli esempi sono disponibili seguendo i link nella tabella che segue, mentre un esempio reale lo si può trovare nella repository [polito_lectures](https://github.com/Guray00/polito_lectures):
+Il template automatizza la creazione di file esportati in `epub`, `pdf` ed `html` da file markdown attraverso il tool [Pandoc](https://pandoc.org/).
+
+Alcuni esempi esempi sono disponibili di seguito:
 
 <table>
 <tr>
@@ -16,17 +18,68 @@ Degli esempi sono disponibili seguendo i link nella tabella che segue, mentre un
         <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.pdf">PDF</a>
     <td> <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.html">WEB</a>
     <td> <a href="https://github.com/Guray00/template_lectures/raw/main/Lecture%20Example/output/Lecture%20Example.epub">EPUB</a>
+<tr>
+    <td> Architetture e sistemi di elaborazione
+    <td> 
+        <a href="https://lectures.mlampis.dev/Architetture%20e%20sistemi%20di%20elaborazione/output/Architetture%20e%20sistemi%20di%20elaborazione.pdf">PDF</a>
+    <td> <a href="https://lectures.mlampis.dev/Architetture%20e%20sistemi%20di%20elaborazione/output/Architetture%20e%20sistemi%20di%20elaborazione.html">WEB</a>
+    <td> <a href="https://lectures.mlampis.dev/Architetture%20e%20sistemi%20di%20elaborazione/output/Architetture%20e%20sistemi%20di%20elaborazione.epub">EPUB</a>
+<tr>
+    <td> Tecnologie e servizi di rete
+    <td> 
+        <a href="https://lectures.mlampis.dev/Tecnologie%20e%20Servizi%20di%20Rete/output/Tecnologie%20e%20Servizi%20di%20Rete.pdf">PDF</a>
+    <td> <a href="https://lectures.mlampis.dev/Tecnologie%20e%20Servizi%20di%20Rete/output/Tecnologie%20e%20Servizi%20di%20Rete.html">WEB</a>
+    <td> <a href="https://lectures.mlampis.dev//Tecnologie%20e%20Servizi%20di%20Rete/output/Tecnologie%20e%20Servizi%20di%20Rete.epub">EPUB</a>
 </table>
 
-## Utilizzo
+## Configurazione
+
+```text
+Your Awesome Lecture
+│   compile.bat/.sh
+│   config.yaml
+│   includes.txt
+│
+├───assets
+│       background.pdf
+│       epub.css
+│
+├───chapters
+│       00_introduction.md
+│       01_awesome-first-chapter.md
+│       02_no-way-another-chapter.md
+│
+├───images
+│       img.jpg
+│
+└───output
+        Lecture Example.epub
+        Lecture Example.html
+        Lecture Example.pdf
+```
+
+Il template è composto da tre cartelle principali:
+
+- **assets**: contiene il necessario per la generazione della formattazione dell'output come copertina e css.
+- **chapters**: contiene i capitoli del documento.
+- **images**: contiene le immagini utilizzate nei capitoli.
+- **output**: contiene i file generati.
+
+Nella `root` sono invece presenti:
+
+- `compile.bat/.sh`: script per la compilazione del documento.
+- `config.yaml`: file di configurazione, contiene tutti i dettagli sul documento da generare.
+- `includes.txt`: contiene l'elenco dei capitoli, nell'ordine desiderato, da includere nel documento.
 
 ### Inclusione file
 
-Inserisci nel file `includes.txt` i file da includere, uno per riga. I file con le immagini devono essere inseriti nella cartella `images` mentre i capitoli devono essere inseriti nella cartella `chapters`.
+Per includere un capitolo nel progetto, è sufficiente specificarlo nel file `includes.txt`, uno per riga.
 
-_nota: nel file includes non bisogna specificare `./chapters/`, quindi il file in `./chapters/capitolo1.md` verrà indicato con `capitolo1.md`_
+Le immagini devono essere inserite nella cartella `images` mentre i capitoli devono essere inseriti nella cartella `chapters`.
 
-### Configurazione
+_Nota: nel file includes non bisogna specificare `./chapters/`, quindi il file in `./chapters/capitolo1.md` verrà indicato con `capitolo1.md`_
+
+### impostazioni
 
 La configurazione contenente titolo, autore ecc è contenuta nel file `config.yaml`.
 Le impostazioni che possono essere apportate sono:
@@ -103,6 +156,6 @@ Tale operazione può essere semplificata eseguendo lo script `vscode_extensions.
 
 Cancella `install.bat`, `vscode_extensions.bat` e la cartella `titlepages/`, se non più necessari.
 
-### 5. Inizia
+### 5. Inizia!
 
 Inizia la scrittura dei tuoi appunti! **Nota:** Al primo avvio mancheranno alcune dipendenze per il latex, leva la spunta alla schermata di installazione pacchetto "show always" e premi su "install". In questo modo verranno installati i pacchetti necessari senza doverlo eseguire manualmente.
