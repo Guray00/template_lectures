@@ -1,7 +1,133 @@
 <!doctype html>
-<html>
+<html lang="it">
 <head>
-    
+    <style>
+#TOC {
+overflow-y: hidden !important; font-size: smaller !important;
+
+}
+p, h1, h2, h3, h4, h5, a, span, li, ul, ol, th, tr, table, figcaption {
+font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif !important;
+}
+[class*="span"] {
+margin-left: 0 !important;
+}
+.well {
+min-height: 0px !important;
+padding: 0px !important;
+margin-bottom: 0px !important;
+background-color: #FFFFFF !important;
+border: 0 !important;
+-webkit-border-radius: 0 !important;
+-moz-border-radius: 0 !important;
+border-radius: 0 !important;
+-webkit-box-shadow: none !important;
+-moz-box-shadow: none !important;
+box-shadow: none !important;
+}
+.navbar-inner {
+background-color: #fefefe !important;
+background-image: none !important;
+background-repeat: no-repeat !important;
+filter: none !important;
+border: 0 !important;
+-webkit-border-radius: 0px !important;
+-moz-border-radius: 0px !important;
+border-radius: 0px !important;
+margin-bottom: 15pt !important;
+-webkit-box-shadow: 0 1px 10px rgb(0 0 0 / 7%) !important;
+-moz-box-shadow: 0 1px 10px rgba(0,0,0,.07) 1 !important;
+box-shadow: 0 1px 10px rgb(0 0 0 / 7%) !important;
+}
+li > ul {
+padding-left: 15px !important;
+}
+pre {
+background-color: #f6f8fa !important;
+border-radius: 3px !important;
+
+line-height: 1.45 !important;
+overflow: auto !important;
+padding: 16px !important;
+font-family: Monaco, Menlo, Consolas, "Courier New", monospace !important;
+border: 0 !important;
+}
+code {
+
+border-radius: 3px !important;
+border: 0 !important;
+
+margin: 0 !important;
+padding: 0.2em 0.4em !important;
+font-family: Monaco, Menlo, Consolas, "Courier New", monospace !important;
+}
+table th {
+background-color: #f6f8fa !important;
+}
+.math * {
+font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif !important;
+}
+.katex-display>.katex>.katex-html {
+font-size: 85% !important;
+font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif !important;
+}
+
+h1:not(:first-of-type){
+margin-top: 50px !important;
+}
+
+h1 {
+border-bottom: 1px solid #e8e8e8fa !important;
+font-size: 2.2em !important;
+}
+
+h2 {
+margin-top: 30px !important;
+font-size: 1.6em !important;
+}
+
+h3 {
+margin-top: 20px !important;
+font-size: 1.3em !important;
+}
+h4 {
+font-size: 1em !important;
+}
+
+.note, .tip, .caution, .warning, .attention, .error, .danger, .definition {
+border-radius: 5pt;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 1px;
+padding-bottom: 1px;
+line-height: normal;
+color: #000000ab;
+margin: 6pt 0pt 6pt 0pt;
+}
+.note code, .tip code, .caution code, .warning code, .attention code, .error code, .danger code, .definition code, .danger code {
+background-color: #00000014;
+}
+.note {
+background-color: #88d3f9;
+}
+.tip {
+background-color: #87f0b8;
+}
+.caution, .warning, .attention {
+background-color: #ffe162;
+}
+.error, .danger {
+background-color: #ff7474;
+}
+.definition {
+background-color: #f191ff;
+}
+.table {
+border-top: 1px solid #ddd;
+margin-top: 15px;
+}
+</style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--[if lt IE 9]>
                 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>

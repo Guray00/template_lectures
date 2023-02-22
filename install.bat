@@ -61,7 +61,7 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.github
 
 
 :: scarico template web
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/elegant_bootstrap_menu.html', 'C:\Users\%username%\AppData\Roaming\pandoc\templates\elegant_bootstrap_menu.html')"
+:: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/ryangrose/easy-pandoc- templates/master/html/elegant_bootstrap_menu.html', 'C:\Users\%username%\AppData\Roaming\pandoc\templates\elegant_bootstrap_menu.html')"
 echo template copiati.
 echo:
 
