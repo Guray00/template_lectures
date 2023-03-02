@@ -9,8 +9,18 @@ then
       OUTPUT=$(basename "$PWD") 
 fi
 
+# enviromnment variables
+CHAPTERS_PATH=./chapters/
+RESOURCES_PATH=./chapters/
+ASSETS_PATH=./assets/
+
 # crea la cartella per gli output
 mkdir -p output
+
+
+# [TODO] verifica pandoc installato
+
+# [TODO] verifica latex installato
 
 
 # nomi dei file di output che verranno generati
@@ -18,6 +28,8 @@ PDFNAME="./output/${OUTPUT}.pdf"
 WEBNAME="./output/${OUTPUT}.html"
 EPUBNAME="./output/${OUTPUT}.epub"
 
+
+# verifica python e pandoc latex environment
 
 # recupera la lista di file contenuti in includes.txt
 readarray -t files < ./includes.txt
@@ -35,19 +47,19 @@ echo
 
 # esegue il comando di creazione
 echo Creazione "${OUTPUT}.pdf" in corso...
-pandoc -s %files% -o ${PDFNAME} --from markdown --template eisvogel --listings --number-sections -V lang=it --top-level-division=chapter -V toc=true --resource-path="./output/" --standalone --embed-resources --metadata-file=config.yaml # --filter pandoc-latex-environment
+pandoc --pdf-engine=xelatex -s ${str_files} -o ${PDFNAME} --from markdown --template eisvogel --listings --number-sections --top-level-division=chapter -V toc=true --resource-path="./output/" --standalone --embed-resources --metadata-file=config.yaml # --filter pandoc-latex-environment
 echo Compilazione PDF terminata.
 echo
 
 # export per la visualizzazione web
 echo Creazione "${OUTPUT}.html" in corso...
-pandoc -s %files% -o ${WEBNAME} --template=elegant_bootstrap_menu.html --toc --standalone --embed-resources --resource-path="./output/" --metadata-file=config.yaml
+pandoc -s ${str_files} -o ${WEBNAME} --template=elegant_bootstrap_menu.html --toc --standalone --embed-resources --resource-path="./output/" --metadata-file=config.yaml
 echo Compilazione HTML terminata.
 echo
 
 # export per la visualizzazione epub
 echo Creazione "${OUTPUT}.epub" in corso...
-pandoc -s %files% -o ${EPUBNAME} --standalone --embed-resources --resource-path="./output/" --metadata-file=config.yaml --toc --css ./assets/epub.css
+pandoc -s ${str_files} -o ${EPUBNAME} --standalone --embed-resources --resource-path="./output/" --metadata-file=config.yaml --toc --css ./assets/epub.css
 echo Compilazione EPUB terminata.
 echo
 
