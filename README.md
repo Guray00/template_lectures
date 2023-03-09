@@ -1,6 +1,9 @@
 # Lectures Template
 
-Questo progetto nasce con lo scopo di fornire agli studenti un modo semplice ed efficace per prendere gli appunti durante i corsi seguiti, focalizzandosi sul contenuto senza doversi preoccupare dell'aspetto grafico (come avviene su MS Word).
+Questo progetto nasce con lo scopo di fornire agli studenti un modo semplice ed efficace per prendere gli appunti durante i corsi seguiti, focalizzandosi sul contenuto senza doversi preoccupare dell'aspetto grafico degli appunti in fase di stesura secondo la metodologia **WYSIWYM**.
+
+> WYSIWYM è l'acronimo di What You See Is What You Mean (letteralmente: quel che vedi è ciò che intendi; sinteticamente, vedi quanto intendi). 
+> ~ [Wikipedia](https://it.wikipedia.org/wiki/WYSIWYM)
 
 Il template automatizza la creazione di file esportati in `epub`, `pdf` ed `html` da file markdown attraverso il tool [Pandoc](https://pandoc.org/).
 
@@ -105,16 +108,17 @@ Sono disponibili nella cartella `titlepages` le copertine per il _Politecnico di
 
 ## Compilazione
 
-Per compilare il progetto sia in formato pdf che html è sufficiente avviare lo script `compile.bat`, automaticamente verrà generato il file pdf, html ed epub all'interno della cartella `output`, con il nome della **cartella** (può essere modificato nel file `compile.bat`).
+Per compilare il progetto nei vari formati è sufficiente avviare lo script `compile.bat`, automaticamente verrà generato il file pdf, html ed epub all'interno della cartella `output`, con il nome della **cartella** (può essere modificato nel file `compile.bat`).
 
 ## Installazione
 
 Per utilizzare il template è necessario installare le seguenti dipendenze:
 
 - [Pandoc Latex Template](https://github.com/Wandmalfarbe/pandoc-latex-template)
-- [Easy Pandoc Templates](https://github.com/ryangrose/easy-pandoc-templates)
 - [Latex](https://miktex.org/download)
 - [Pandoc](https://pandoc.org/installing.html)
+
+Tale operazione può essere fatta manualmente o attraverso lo script di installazione `install.bat`(windows) o `install.sh` (linux) fornito.
 
 ### 1. Download repository
 
@@ -132,7 +136,7 @@ Se hai scaricato lo zip dal link, estrai la cartella, ed entra al suo interno.
 
 ### 2. Installa le dipendenze
 
-Installa le dipendenze necessarie per la compilazione dei file eseguendo il file `install.bat`.
+Installa le dipendenze necessarie per la compilazione dei file eseguendo il file `install.bat` su Windows o `install.sh` su Linux.
 
 ### 3. Installa le estensioni per vscode [opzionale]
 
@@ -150,7 +154,7 @@ yzane.markdown-pdf
 yzhang.markdown-all-in-one
 ```
 
-Tale operazione può essere semplificata eseguendo lo script `vscode_extensions.bat`.
+Tale operazione può essere semplificata eseguendo lo script `vscode_extensions.bat` (windows) oppure `vscode_extensions.sh` (linux).
 
 ### 4. Rimuovi file inutili
 
@@ -159,3 +163,98 @@ Cancella `install.bat`, `vscode_extensions.bat` e la cartella `titlepages/`, se 
 ### 5. Inizia!
 
 Inizia la scrittura dei tuoi appunti! **Nota:** Al primo avvio mancheranno alcune dipendenze per il latex, leva la spunta alla schermata di installazione pacchetto "show always" e premi su "install". In questo modo verranno installati i pacchetti necessari senza doverlo eseguire manualmente.
+
+## Tips
+
+E' possibile centrare le immagini specificando una descrizione tra parentesi quadre, ad esempio:
+
+```markdown
+![descrizione](./images/img.jpg)
+```
+
+In caso contrario l'immagine non verrà centrata.
+
+
+## Cheatsheet Markdown
+
+E' possibile trovare una versione più estesa e completa al seguente [link](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Titoli
+
+```markdown
+# Titolo 1
+## Titolo 2
+### Titolo 3
+```
+
+### Grassetto
+
+```markdown
+testo in **grassetto** o __grassetto__
+```
+
+testo in **grassetto** o __grassetto__
+
+### Corsivo
+
+```markdown
+*corsivo*
+```
+
+### Immagini
+
+```markdown
+![descrizione](./images/img.jpg)
+```
+
+### Link
+
+```markdown
+[descrizione](https://www.google.com)
+```
+
+### Tabella
+
+```markdown
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+```
+
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+
+### Ordered list
+
+```markdown
+1. Elemento 1
+2. Elemento 2
+3. Elemento 3
+```
+
+1. Elemento 1
+2. Elemento 2
+3. Elemento 3
+
+### Unordered list
+
+```markdown
+- Elemento 1
+- Elemento 2
+- Elemento 3
+```
+
+- Elemento 1
+- Elemento 2
+- Elemento 3
+
+### Citazione
+
+```markdown
+> Citazione di un testo
+```
+
+> Citazione di un testo
