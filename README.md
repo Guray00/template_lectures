@@ -164,6 +164,33 @@ Cancella `install.bat`, `vscode_extensions.bat` e la cartella `titlepages/`, se 
 
 Inizia la scrittura dei tuoi appunti! **Nota:** Al primo avvio mancheranno alcune dipendenze per il latex, leva la spunta alla schermata di installazione pacchetto "show always" e premi su "install". In questo modo verranno installati i pacchetti necessari senza doverlo eseguire manualmente.
 
+## Problemi comuni
+
+### 1. xelatex: major issue
+
+```text
+xelatex: major issue: So far, you have not checked for MiKTeX updates.
+Error producing PDF.
+! Package pagecolor Error: Newer LaTeX format needed or older undolabl package.
+
+
+See the pagecolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62   }
+```
+
+Per risolvere è sufficiente aprire la console di **MiKTeX** e premere su _"Check for updates"_. In questo modo verranno installati i pacchetti necessari senza doverlo eseguire manualmente.
+
+### 2. Documenti uniti
+
+Se è presente qualche problema relativa all'unione dei file, è necessario inserire una riga vuota alla fine del file.
+
+### 3. Riga vuota in `includes.txt`
+
+Il file `includes.txt` non deve contenere righe vuote, in caso contrario può generare errori di compilazione.
+
 ## Tips
 
 E' possibile centrare le immagini specificando una descrizione tra parentesi quadre, ad esempio:
