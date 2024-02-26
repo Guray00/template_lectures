@@ -1,4 +1,13 @@
 #!/bin/sh
+function check_distro() {
+    echo "Checking distribution..."
+
+    os_release=$(cat /etc/os-release)
+    distribution=$(echo "$os_release" | grep -oP 'ID_LIKE=".*?"' | cut -d'"' -f2)
+
+    # Assign the value directly without return
+    distro="$distribution"
+}
 
 # scritta iniziale
 echo Benvenuto nell'installer del template
@@ -9,18 +18,41 @@ echo - template per PDF
 echo - template per WEB
 echo
 
+# controllo la distribuzione
+check_distro
+
 # INSTALLAZIONE LATEX
-sudo apt install texlive 
-sudo apt-get install texlive-generic-extra
-sudo apt-get install texlive-extra
-sudo apt-get install texlive-fonts-recommended texlive-fonts-extra
 
-echo latex installato.
-echo 
+if [ "$distro" = "Ubuntu" ] || [ "$distro" = "ubuntu" ]; then
+    # Installa TeX Live su Ubuntu
+    echo "Installazione di TeX Live"
+    sudo apt install texlive
+    sudo apt-get install texlive-generic-extra
+    sudo apt-get install texlive-extra
+    sudo apt-get install texlive-fonts-recommended texlive-fonts-extra
 
-# INSTALLAZIONE PANDOC
-sudo apt install pandoc
-echo pandoc installato.
+    echo "TeX Live installato correttamente!"
+
+    # Installa Pandoc su Ubuntu
+    echo "Installazione di Pandoc"
+    sudo apt-get install pandoc
+    echo pandoc installato.
+
+elif [ "$dis" = "Arch" ] || [ "$distro" = "arch" ]; then
+    # Installa TeX Live su Arch
+    echo "Installazione di TeX Live"
+    sudo pacman -S --needed  texlive
+
+    echo "TeX Live installato correttamente!"
+
+    # Installa Pandoc su Arch
+    echo "Installazione di Pandoc"
+
+    sudo pacman -S --needed pandoc
+    echo pandoc installato.
+
+fi
+
 echo 
 
 echo Sto copiando i template...
