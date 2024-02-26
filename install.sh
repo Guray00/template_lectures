@@ -51,6 +51,9 @@ elif [ "$dis" = "Arch" ] || [ "$distro" = "arch" ]; then
     sudo pacman -S --needed pandoc
     echo pandoc installato.
 
+    pip install pandoc-latex-environment --break-system
+    echo pandoc-latex-environment installato.
+
 fi
 
 echo 
